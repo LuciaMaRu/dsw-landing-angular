@@ -1,18 +1,43 @@
-<header class="container py-5 text-center">
-  <h1 class="display-5 fw-bold">Desarrollo de Sitios Web</h1>
+<header class="inicio container text-center">
+  <span class="inicio-etiqueta">
+    <i class="bi bi-code-slash"></i>
+    Desarrollo web
+  </span>
 
-  <p class="lead">Descripción breve de 2 a 3 líneas redactada por el estudiante.</p>
+  <h1 class="display-5 fw-bold mt-3">Desarrollo de Sitios Web</h1>
+
+  <div class="inicio-descripcion">
+    <p>
+      Angular es un framework de desarrollo web que permite crear aplicaciones de manera rápida y
+      estructurada gracias a su amplio conjunto de herramientas. Para el desarrollo de aplicaciones
+      se utiliza TypeScript como lenguaje de programación, el cual permite definir componentes,
+      interfaces y tipos de datos, facilitando la organización y el mantenimiento del código.
+    </p>
+
+    <p>
+      Asimismo, Node.js como entorno de ejecución y npm como administrador de paquetes permiten
+      instalar y gestionar las dependencias necesarias para el proyecto, así como ejecutar las
+      herramientas de desarrollo de Angular.
+    </p>
+  </div>
 </header>
 
-<section class="container pb-5">
+<section class="tecnologias container pb-5">
+  <div class="seccion-titulo text-center mb-4">
+    <h2 class="h3 fw-bold">Tecnologías utilizadas</h2>
+    <p>Herramientas principales para el desarrollo de aplicaciones web.</p>
+  </div>
+
   <div class="row g-4">
     @for (tec of tecnologias; track tec.nombre) {
       <div class="col-12 col-md-4">
-        <div class="card h-100 text-center shadow-sm">
+        <div class="card tarjeta-tecnologia h-100 text-center">
           <div class="card-body">
-            <i class="bi {{ tec.icono }} fs-1"></i>
+            <div class="icono-tecnologia">
+              <i class="bi {{ tec.icono }}"></i>
+            </div>
 
-            <h2 class="h5 mt-3">{{ tec.nombre }}</h2>
+            <h3 class="h5 mt-3">{{ tec.nombre }}</h3>
 
             <p class="mb-0">{{ tec.descripcion }}</p>
           </div>

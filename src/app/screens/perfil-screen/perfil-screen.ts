@@ -11,14 +11,14 @@ import { Component } from '@angular/core';
 })
 export class PerfilScreen {
   perfil = {
-    nombre: 'Nombre Apellido Apellido',
+    nombre: 'Jesabelli Luna Marino',
 
-    email: 'correo@ejemplo.com',
+    email: 'belli@correo.com',
 
-    telefono: '222 000 0000',
+    telefono: '22 2334 4556',
 
-    direccion: 'Calle, número, colonia, Puebla, Pue.',
+    direccion: '7 Sur, 1301, Centro, Puebla, Pue.',
 
-    nacimiento: '01/01/2000',
+    nacimiento: '14/08/2006',
   };
 }

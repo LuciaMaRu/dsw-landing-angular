@@ -1,0 +1,118 @@
+// Introducción
+.inicio {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+
+  .inicio-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1rem;
+    color: #0369a1;
+    background-color: #e0f2fe;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  h1 {
+    color: #172554;
+    letter-spacing: -1px;
+  }
+
+  .inicio-descripcion {
+    max-width: 850px;
+    margin: 1.5rem auto 0;
+
+    p {
+      color: #64748b;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Sección de tecnologías
+.tecnologias {
+  padding-top: 1rem;
+
+  .seccion-titulo {
+    h2 {
+      color: #172554;
+    }
+
+    p {
+      color: #64748b;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Tarjetas
+.tarjeta-tecnologia {
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  .card-body {
+    padding: 2rem 1.5rem;
+  }
+
+  .icono-tecnologia {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #eff6ff;
+    color: #2563eb;
+    border-radius: 1rem;
+
+    i {
+      font-size: 2.2rem;
+    }
+  }
+
+  h3 {
+    color: #172554;
+    font-weight: 700;
+  }
+
+  p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+    border-color: #bfdbfe;
+  }
+}
+
+// Diseño adaptable
+@media (max-width: 767.98px) {
+  .inicio {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    .inicio-descripcion p {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  }
+
+  .tarjeta-tecnologia .card-body {
+    padding: 1.5rem;
+  }
+}

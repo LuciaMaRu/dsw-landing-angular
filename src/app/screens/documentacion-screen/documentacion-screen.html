@@ -1,48 +1,65 @@
-<section class="container py-5">
-  <h2 class="mb-3">Documentación</h2>
+<section class="documentacion container py-5">
+  <!-- Encabezado -->
+  <header class="documentacion-encabezado text-center mb-5">
+    <span class="documentacion-etiqueta">
+      <i class="bi bi-book"></i>
+      Recursos de aprendizaje
+    </span>
 
-  <a
-    class="btn btn-primary mb-4"
-    [href]="urlDocumentacion"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i class="bi bi-box-arrow-up-right"></i> Documentación oficial de Angular
-  </a>
+    <h1 class="display-5 fw-bold mt-3">Documentación</h1>
 
-  <div id="carruselTecnologias" class="carousel slide bg-dark rounded">
-    <div class="carousel-inner py-4">
-      @for (d of diapositivas; track d.titulo) {
-        <div class="carousel-item" [class.active]="$first">
-          <img [src]="d.imagen" [alt]="d.titulo" height="220" class="d-block mx-auto" />
+    <p>Consulta los recursos oficiales y conoce las tecnologías utilizadas en el desarrollo web.</p>
 
-          <div class="carousel-caption position-static pt-3">
-            <h3 class="h5">{{ d.titulo }}</h3>
-          </div>
-        </div>
-      }
+    <a
+      class="btn btn-documentacion mt-3"
+      [href]="urlDocumentacion"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="bi bi-box-arrow-up-right"></i>
+      Documentación oficial de Angular
+    </a>
+  </header>
+
+  <!-- Carrusel -->
+  <div class="carrusel-contenedor">
+    <div class="carrusel-encabezado">
+      <h2 class="h4 fw-bold mb-1">Tecnologías del proyecto</h2>
+      <p class="mb-0">Explora las herramientas que forman parte del desarrollo.</p>
     </div>
 
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carruselTecnologias"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <div id="carruselTecnologias" class="carousel slide">
+      <div class="carousel-inner">
+        @for (d of diapositivas; track d.titulo) {
+          <div class="carousel-item" [class.active]="$first">
+            <div class="diapositiva-contenido">
+              <img [src]="d.imagen" [alt]="d.titulo" />
 
-      <span class="visually-hidden">Anterior</span>
-    </button>
+              <h3>{{ d.titulo }}</h3>
+            </div>
+          </div>
+        }
+      </div>
 
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carruselTecnologias"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carruselTecnologias"
+        data-bs-slide="prev"
+        aria-label="Anterior"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
 
-      <span class="visually-hidden">Siguiente</span>
-    </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carruselTecnologias"
+        data-bs-slide="next"
+        aria-label="Siguiente"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
   </div>
 </section>

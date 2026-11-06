@@ -1,0 +1,180 @@
+// Encabezado
+.documentacion {
+  .documentacion-encabezado {
+    .documentacion-etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1rem;
+      color: #0369a1;
+      background-color: #e0f2fe;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      color: #172554;
+    }
+
+    p {
+      color: #64748b;
+      margin: 0.75rem auto 0;
+      max-width: 650px;
+      line-height: 1.7;
+    }
+  }
+}
+
+// Botón de documentación
+.btn-documentacion {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.4rem;
+  color: #ffffff;
+  background-color: #1d4ed8;
+  border: 1px solid #1d4ed8;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #172554;
+    border-color: #172554;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(23, 37, 84, 0.2);
+  }
+
+  &:focus-visible {
+    outline: 3px solid rgba(56, 189, 248, 0.4);
+    outline-offset: 3px;
+  }
+}
+
+// Contenedor del carrusel
+.carrusel-contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+
+  .carrusel-encabezado {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e2e8f0;
+
+    h2 {
+      color: #172554;
+    }
+
+    p {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Diapositivas
+#carruselTecnologias {
+  background: linear-gradient(145deg, #f8fafc, #eff6ff);
+
+  .carousel-item {
+    padding: 2rem 5rem;
+  }
+
+  .diapositiva-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    min-height: 300px;
+
+    img {
+      width: 100%;
+      max-width: 350px;
+      height: 220px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    h3 {
+      color: #172554;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .carousel-item.active .diapositiva-contenido img {
+    animation: aparecer 0.5s ease;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      padding: 1.2rem;
+      background-color: #1e3a8a;
+      background-size: 55%;
+      border-radius: 50%;
+    }
+  }
+}
+
+// Animación
+@keyframes aparecer {
+  from {
+    opacity: 0.5;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Responsive
+@media (max-width: 575.98px) {
+  .documentacion {
+    padding-top: 3rem !important;
+
+    .documentacion-encabezado h1 {
+      font-size: 2.2rem;
+    }
+  }
+
+  .carrusel-contenedor .carrusel-encabezado {
+    padding: 1.2rem;
+  }
+
+  #carruselTecnologias {
+    .carousel-item {
+      padding: 1.5rem 3rem;
+    }
+
+    .diapositiva-contenido {
+      min-height: 250px;
+
+      img {
+        height: 180px;
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 12%;
+    }
+  }
+
+  .btn-documentacion {
+    font-size: 0.9rem;
+  }
+}
